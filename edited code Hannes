@@ -1,0 +1,66 @@
+pip install --upgrade pip
+pip install msgpack
+pip install selenium
+pip install webdriver_manager
+
+#creating link between chromedriver and selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
+#driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome()
+
+#directing the chromedriver towards the webpage of interest
+url = 'https://uk.flightaware.com/live/cancelled/'
+driver.get(url)
+#setting a sleeping time to add delay in the execution of the program
+import time
+time.sleep(2)
+
+#locating the table
+tables1 = driver.find_elements_by_id("airline-cancel-table")
+for table in tables1:
+    print('ok')
+
+#finding the right classes (either this way or merging the two outputs)
+all_rows1 = table.find_elements_by_class_name("smallrow1")
+all_rows2 = table.find_elements_by_class_name("smallrow2")
+all_rows = all_rows1+all_rows2
+
+# loops through all elements of the table and creating an ouput document with the data needed for table 1
+f = open('output1.csv', 'w', encoding = 'utf-8')
+f.write('n_cancelled\tperc_cancelled\tn_delayed\tperc_delayed\tairline_name\n')
+
+for table in tables1:
+    for row in all_rows:
+        for col in row.find_elements_by_tag_name('td'):
+            f.write(col.text)
+            f.write('\t')
+        f.write('\n')
+f.close()
+
+
+#locating the table
+tables2 = driver.find_elements_by_id("origin-cancel-table")
+for table2 in tables2:
+    print('ok')
+    
+#finding the right classes (either this way or merging the two outputs)
+all_rows1 = table.find_elements_by_class_name("smallrow1")
+all_rows2 = table.find_elements_by_class_name("smallrow2")
+all_rows = all_rows1+all_rows2
+
+# loops through all elements of the table and creating an ouput document with the data needed for table 2
+f = open('output2.csv', 'w', encoding = 'utf-8')
+f.write('n_cancelled\tperc_cancelled\tn_delayed\tperc_delayed\tairport_name\n')
+
+for table2 in tables2:
+    for row in all_rows:
+        for col in row.find_elements_by_tag_name('td'):
+            f.write(col.text)
+            f.write('\t')
+        f.write('\n')
+f.close()
+
