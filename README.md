@@ -1,5 +1,5 @@
 ## How reliable is your flight?
-_Historical data scraped from the internet to mske reliability predictions_ (rewrite research question)
+_Based on worldwide flight cancellation statistics, which airlines and flight routes are most often affected by cancelled flights? Is there an identifiable pattern in the collected data, with which it's possible to forecast this unfortunate event?_ 
 
 ## Motivation
 
