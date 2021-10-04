@@ -15,7 +15,26 @@ Overall quality of the data package (10% of the final grade)
 
 ## Documentation
 
+Tips for filling in the documentation
+- Try to answer all questions to the best of your ability.
+- Imagine you would have to work with this data in the future – how would you write up the documentation so that you (and your future self) may understand it?
+- In your writing, be as concise as possible. We’ve had some recent experience using tools like Grammarly to improve our writing (there is a free version available), but there are certainly alternatives available!
+- The original paper on which the readme template is based on provides a few helpful (filled in) examples that may provide some inspiration.
+- If you are familiar with R, you can write your documentation in RMarkdown, which nicely intertwines answers to the questions (e.g., conceptual answers) with details/statistics from the data (i.e., by including code snippets that directly generate overview tables).
+- Please pick a good name for your dataset. This name will be the first thing potential users of your data will see. Use it as the title of your documentation (don’t call your dataset “Datasheets for Datasets”!)
+- Please skip sections 6 and 7 of the documentation (distribution and maintenance). Do get rid of the example text in these sections though.
+
 1.           	Motivation
+
+Motivation (section 1 of your documentation, 10%)
+From your answers to all questions in section 1 of the documentation template, the following points need to be addressed:
+
+Motivation for data context (5%)
+Clear explanation of the value in collecting the data (“task in mind”), either in the context of a specific research question or business problem. The data collection potentially generates insights into new phenomena. There is clearly value to the larger research community in using the data. Comparable data sets are not available at all, or not publicly available.
+
+Motivation for choice of website/API (5%)
+A range of relevant websites and APIs pertaining to the data context is assessed in terms of data availability, research fit & resource use. It is clear why the data was ultimately collected from the focal website/API, and not from others (i.e., the website/API emerges as the one that fits best in terms of research fit and resource use; #1.4).
+
 1.1   	For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
 ...
@@ -30,6 +49,20 @@ Overall quality of the data package (10% of the final grade)
 
 
 2.           	Composition
+
+Composition (section 2 of your documentation, 20%)
+From your answers to all questions in section 2 of the documentation template, the following points need to be addressed:
+
+Entities, linkages, timeframe and algorithmic biases (5%)
+The composition of the data is described in detail and accessible to novel users of the data. Potential users learn about which entities are available in the data set, for what time period, and how they are linked to each other. Potential linkages to external data sets are made explicit (e.g., by means of links to external websites or sources that explain more about the used identifiers). Potential algorithmic biases have been identified and clearly explained.
+
+Sampling, construct measurement and data structure (5%)
+For each entity, it is explained how the data was sampled, and how variables are measured. Details are given how the data is available (e.g., by means of CSV files per entity, as a combined data set, etc.).
+
+Data inspection per entity (10%)
+Each set of entities is accompanied by meaningful summary statistics (e.g., the number of units per entity, means/SD for continuous variables, and frequency distributions per variable, for each entity). Missingness has been investigated (e.g., for individual entities, but also for the collected variables). Any redundancies, errors, or sources of noise have been clearly described. Identified subpopulations are labeled, so that users of the data can more easily get started using the data.
+
+
 2.1   	What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of in- stances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
 
 ...
@@ -93,6 +126,15 @@ Overall quality of the data package (10% of the final grade)
  
  
 3.           	Collection Process
+
+Collection process (section 3 of your documentation, 15%)
+From your answers to all questions in section 3 of the documentation template, the following points need to be addressed:
+
+Technical extraction plan (10%)
+The technical extraction plan has been described in a way that the data collection could be replicated. This encompasses providing a solid argumentation on why a particular data extraction technology used (e.g., selenium versus Beautifulsoup for websites, a package versus self-coded requests for APIs). It is clear how entities were sampled from the site, and how the navigation scheme was implemented. In particular, users of the data learn about the technical hurdles that needed to be overcome, and which monitoring was in place to guarantee (and validate) data quality. Finally, details are given on how (deployment infrastructure) and when the data collection was executed (e.g., by meaningful summaries of the timestamps in log files), and where the final data set was stored during the collection.
+
+Legal and ethical concerns (5%) For #3.6, the potential legal and/or ethical concerns that may be relevant for the collected data are carefully described.
+
 3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
  
 ...
@@ -144,6 +186,17 @@ Overall quality of the data package (10% of the final grade)
 
  
 4.           	Preprocessing, cleaning, labeling
+
+Preprocessing (section 4 of your documentation, 10%)
+From your answers to all questions in section 4 of the documentation template, the following points need to be addressed:
+
+Preprocessing (5%)
+Any pre-processing on the fly has been motivated and explained, using a few specific examples. Any further pre-processing after the collection has been described (e.g., such as to anonymize users for privacy concerns, to identify and clean out implausible observations, or to improve data structure for long-term storage, such as rearranging the data structure, relabeling columns into more meaningful and clear variable names).
+
+Accessibility and structure of final data files (5%)
+The files have a correct data structure, and variables are of the correct type (e.g., numbers as integers or floats, not as strings; time stamps properly formatted, or Unixtime used). Application of data enrichment and feature engineering strategies (e.g., to derive new variables from the data, where necessary). Data has been normalized (i.e., preferably multiple tables that can be joined together, rather than a wide table that contains many duplicates on some of the variables). If imputation is used, it is indicated which values have been imputed (e.g., interpolated; for example: followers (without missing), and followers_inputed as a TRUE/FALSE variable, indicating which ones were imputed). Finally, the data set is provided in CSV files, including column names, proper use of delimiters (e.g., a “,” may be inappropriate for textual data involving commas). No row names/index column.
+
+
 4.1   	Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remain- der of the questions in this section.
  
 ...
@@ -158,6 +211,13 @@ Overall quality of the data package (10% of the final grade)
 
 
 5.           	Uses
+
+Uses (section 5 of your documentation, 5%)
+From your answers to all questions in section 5 of the documentation template, the following points need to be addressed:
+
+Users of the data learn about tasks the data set could be used for (5%)
+From the description, it is clear how the composition of the data set or the way it was preprocessed might affect future use. A clear indication is given for what the data should not be used for, e.g., relating to any of the legal or ethical concerns identified before.
+
 5.1   	Has the dataset been used for any tasks already? If so, please provide a description.
  
 ...
@@ -179,61 +239,39 @@ Overall quality of the data package (10% of the final grade)
 ...
  
  
-6.  	Distribution
-6.1   	Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created? If so, please provide a description.
+ ## Source Code for the Data Collection
  
-...
- 
-6.2   	How will the dataset be distributed (e.g., tarball on website, API, GitHub)? Does the dataset have a digital object identifier (DOI)?
- 
-....
- 
-6.3   	When will the dataset be distributed?
- 
-...
- 
-6.4   	Will the dataset be distributed under a copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)? If so, please describe this license and/or ToU, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms or ToU, as well as any fees associated with these restrictions.
- 
-...
- 
-6.5   	Have any third parties imposed IP-based or other restrictions on the data associated with the instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any relevant licensing terms, as well as any fees associated with these restrictions.
- 
-...
- 
-6.6   	Do any export controls or other regulatory restrictions apply to the dataset or to individual instances? If so, please describe these restrictions, and provide a link or other access point to, or otherwise reproduce, any supporting documentation.
- 
-...
+Quality of the submitted source code (15%)
 
- 
-7.  	Maintenance
-7.1   	Who will be supporting/hosting/maintaining the dataset?
- 
-...
- 
-7.2   	How can the owner/curator/manager of the dataset be contacted (e.g., email address)?
- 
-...
- 
-7.3   	Is there an erratum? If so, please provide a link or other access point.
- 
-...
- 
-7.4   	Will the dataset be updated (e.g., to correct labeling errors, add new instances, delete instances)? If so, please describe how often, by whom, and how updates will be communicated to users (e.g., mailing list, GitHub)?
- 
-...
- 
-7.5   	If the dataset relates to people, are there applicable limits on the retention of the data associated with the instances (e.g., were individuals in question told that their data would be retained for a fixed period of time and then deleted)? If so, please describe these limits and explain how they will be enforced.
- 
-...
- 
-7.6   	Will older versions of the dataset continue to be sup- ported/hosted/maintained? If so, please describe how. If not, please describe how its obsolescence will be communicated to users.
- 
-...
- 
-7.7   	If others want to extend/augment/build on/contribute to the dataset, is there a mechanism for them to do so? If so, please provide a description. Will these contributions be validated/verified? If so, please describe how. If not, why not? Is there a process for communicating/distributing these contributions to other users? If so, please provide a description.
- 
-...
+- Present and clearly readable (e.g., variable names that are meaningful)
+- Inline markdown formatting (e.g., headers, dividers, paragraphs, etc.)
+- Well-structured and modular source code (e.g., use of functions)
+- Adhere to DRY principles (e.g., for-loops and functions)
+- Concise code (e.g., list and dictionary comprehensions)
+- With comments and docstrings
+- Code blocks run in a linear fashion (i.e., top to bottom execution runs without issues); removal of unnecessary source code and packages that are not needed
+- File paths are specified relative to the current script, no absolute paths used
+- Error-handling incorporated (e.g., does the scraper still run if the API or website changes?)
+- Quality of the technical implementation (15%)
 
+The quality of the technical implementation is judged for web scraping and APIs, as per some of the following dimensions.
+
+Web scraping
+
+- A single vs. multiple entities / web pages
+- Degree of complexity required to obtain data (e.g., static websites with a fixed class name vs social media which requires more dynamic approaches such as clicking on buttons and navigating across pages; self-coded extraction code versus use of a package which extracts data automatically)
+- Stability of the solution (i.e., navigation path should not be subjective to day-to-day page changes). Can the code be run after submission? Can the code be run on Windows, Mac and Linux?
+- Obeying retrieval limits (usage of timers to avoid overloading the server and getting blocked and writing efficient code; create a single BeautifulSoup object per page; avoid making redundant requests)
+- Uniqueness (e.g., a combination of data collected through an API and web scraping)
+
+ ## Data Package
+Quality of the data package (10%)
+- Submitted as a zip file
+- Accessible and appropriate directory structure
+- No unnecessary files
+- Inclusion of meaningful supportive files (e.g., API documentation, screenshots, a video of the scraper in action)
+- Raw data files all present
+- Documentation properly formatted and no template text (“lorem ips…") remaining
 
 
 
