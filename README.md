@@ -37,7 +37,7 @@ A range of relevant websites and APIs pertaining to the data context is assessed
 
 1.1   	For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
-...
+Because of the pandemic, people have significatively changed their flying habits. Flights are being purchased in the proximity of the departure date as is not easy to make long term plans anymore. From the airline perspective, this led to increasing difficulties in managing the flight traffic. This has resulted in a rise in the flight cancellation rate in all the international airports and for all the best-renowned airline companies. The data regarding this problem are not accessible to users or, if published, are only referring to the past 2 days. Our mission is to collect all the details regarding cancelled and delayed flights in the biggest international airport every day until the creation of a large and very precious dataset. We think that through the observation of historical data regarding this phenomenon, we will be able to determine the risk of cancellation for upcoming flights.
  
 1.2   	Who created this dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
 
