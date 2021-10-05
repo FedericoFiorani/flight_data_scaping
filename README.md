@@ -24,7 +24,7 @@ Tips for filling in the documentation
 - Please pick a good name for your dataset. This name will be the first thing potential users of your data will see. Use it as the title of your documentation (don’t call your dataset “Datasheets for Datasets”!)
 - Please skip sections 6 and 7 of the documentation (distribution and maintenance). Do get rid of the example text in these sections though.
 
-1.           	Motivation
+## 1.           	Motivation
 
 Motivation (section 1 of your documentation, 10%)
 From your answers to all questions in section 1 of the documentation template, the following points need to be addressed:
@@ -35,20 +35,21 @@ Clear explanation of the value in collecting the data (“task in mind”), eith
 Motivation for choice of website/API (5%)
 A range of relevant websites and APIs pertaining to the data context is assessed in terms of data availability, research fit & resource use. It is clear why the data was ultimately collected from the focal website/API, and not from others (i.e., the website/API emerges as the one that fits best in terms of research fit and resource use; #1.4).
 
-1.1   	For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
+## 1.1   	For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled? Please provide a description.
 
 Because of the pandemic, people have significatively changed their flying habits. Flights are being purchased in the proximity of the departure date as is not easy to make long term plans anymore. From the airline perspective, this led to increasing difficulties in managing the flight traffic. This has resulted in a rise in the flight cancellation rate in all the international airports and for all the best-renowned airline companies. The data regarding this problem are not accessible to users or, if published, are only referring to the past 2 days. Our mission is to collect all the details regarding cancelled and delayed flights in the biggest international airport every day until the creation of a large and very precious dataset. We think that through the observation of historical data regarding this phenomenon, we will be able to determine the risk of cancellation for upcoming flights.
  
-1.2   	Who created this dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
+## 1.2   	Who created this dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
 
-...
+FlightAware is a digital aviation company and operates the world's largest flight tracking and data platform. With global connectivity to every segment of aviation, FlightAware provides over 10,000 aircraft operators and service providers as well as over 13,000,000 passengers with global flight tracking solutions, predictive technology, analytics, and decision-making tools.
  
-1.3   	Who funded the creation of the dataset? If there is an associated grant, please provide the name of the grantor and the grant name and number.
+## 1.3   	Who funded the creation of the dataset? If there is an associated grant, please provide the name of the grantor and the grant name and number.
  
-...
+Not sure this is the correct answer:
+FlightAware receives data from air traffic control systems in over 45 countries, FlightAware's network of ADS-B ground stations in 195 countries, Aireon global space-based ADS-B, and datalink (satellite/VHF) via every major provider, including ARINC, SITA, Satcom Direct, Garmin, and Honeywell GoDirect.
 
 
-2.           	Composition
+## 2.           	Composition
 
 Composition (section 2 of your documentation, 20%)
 From your answers to all questions in section 2 of the documentation template, the following points need to be addressed:
@@ -63,69 +64,69 @@ Data inspection per entity (10%)
 Each set of entities is accompanied by meaningful summary statistics (e.g., the number of units per entity, means/SD for continuous variables, and frequency distributions per variable, for each entity). Missingness has been investigated (e.g., for individual entities, but also for the collected variables). Any redundancies, errors, or sources of noise have been clearly described. Identified subpopulations are labeled, so that users of the data can more easily get started using the data.
 
 
-2.1   	What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of in- stances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
+## 2.1   	What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of in- stances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
 
 ...
  
-2.2   	How many instances are there in total (of each type, if appropriate)?
+## 2.2   	How many instances are there in total (of each type, if appropriate)?
 
 ...
  
-2.3   	Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).
+## 2.3   	Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).
  
 ...
  
-2.4   	What data does each instance consist of? “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a de- scription.
- 
-...
-
-2.5   	Is there a label or target associated with each instance? If so, please provide a description.
- 
-...
- 
-2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
- 
-...
- 
-2.7   	Are relationships between individual instances made explicit (e.g., users’ movie ratings, social network links)? If so, please describe how these relationships are made explicit.
- 
-...
- 
-2.8   	Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.
- 
-...
- 
-2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
+## 2.4   	What data does each instance consist of? “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a de- scription.
  
 ...
 
-2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
+## 2.5   	Is there a label or target associated with each instance? If so, please provide a description.
+ 
+...
+ 
+## 2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
+ 
+...
+ 
+## 2.7   	Are relationships between individual instances made explicit (e.g., users’ movie ratings, social network links)? If so, please describe how these relationships are made explicit.
+ 
+...
+ 
+## 2.8   	Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.
+ 
+...
+ 
+## 2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
+ 
+...
+
+## 2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
  
 ....
  
-2.11  	Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.
+## 2.11  	Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.
  
 ...
  
-2.12  	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
+## 2.12  	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
  
 ...
  
-2.13 Does the dataset identify any subpopulations (e.g., by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
+## 2.13 Does the dataset identify any subpopulations (e.g., by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
  
 ...
  
-2.14 Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how.
- 
-...
- 
- 
-2.15  	Does the dataset contain data that might be considered sensitive in any way (e.g., data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.
+## 2.14 Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how.
  
 ...
  
  
-3.           	Collection Process
+## 2.15  	Does the dataset contain data that might be considered sensitive in any way (e.g., data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.
+ 
+...
+ 
+ 
+## 3.           	Collection Process
 
 Collection process (section 3 of your documentation, 15%)
 From your answers to all questions in section 3 of the documentation template, the following points need to be addressed:
@@ -135,57 +136,33 @@ The technical extraction plan has been described in a way that the data collecti
 
 Legal and ethical concerns (5%) For #3.6, the potential legal and/or ethical concerns that may be relevant for the collected data are carefully described.
 
-3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
+## 3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
  
 ...
  
-3.2   	What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software pro- gram, software API)? How were these mechanisms or procedures validated?
+## 3.2   	What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software pro- gram, software API)? How were these mechanisms or procedures validated?
  
 ...
  
-3.3   	If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
+## 3.3   	If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
  
 ...
  
-3.4   	Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
+## 3.4   	Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
  
 ...
  
-3.5   	Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the time- frame in which the data associated with the instances was created.
+## 3.5   	Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the time- frame in which the data associated with the instances was created.
  
 ...
  
-3.6   	Were any ethical review processes conducted (e.g., by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
+## 3.6   	Were any ethical review processes conducted (e.g., by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
  
 ...
  
-3.7   	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
- 
-...
- 
-3.8   	Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g., websites)?
- 
-...
- 
-3.9   	Were the individuals in question notified about the data collection? If so, please describe (or show with screenshots or other information) how notice was provided, and provide a link or other access point to, or other- wise reproduce, the exact language of the notification itself.
- 
-...
- 
-3.10  	Did the individuals in question consent to the collection and use of their data? If so, please describe (or show with screenshots or other information) how consent was requested and provided, and provide a link or other access point to, or otherwise reproduce, the exact language to which the individuals consented.
- 
-...
- 
- 
-3.11  	If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses? If so, please provide a description, as well as a link or other access point to the mechanism (if appropriate).
- 
-...
- 
-3.12  	Has an analysis of the potential impact of the dataset and its use on data subjects (e.g., a data protection impact analysis) been conducted? If so, please provide a description of this analysis, including the outcomes, as well as a link or other access point to any supporting documentation.
- 
-...
 
  
-4.           	Preprocessing, cleaning, labeling
+## 4.           	Preprocessing, cleaning, labeling
 
 Preprocessing (section 4 of your documentation, 10%)
 From your answers to all questions in section 4 of the documentation template, the following points need to be addressed:
@@ -197,20 +174,20 @@ Accessibility and structure of final data files (5%)
 The files have a correct data structure, and variables are of the correct type (e.g., numbers as integers or floats, not as strings; time stamps properly formatted, or Unixtime used). Application of data enrichment and feature engineering strategies (e.g., to derive new variables from the data, where necessary). Data has been normalized (i.e., preferably multiple tables that can be joined together, rather than a wide table that contains many duplicates on some of the variables). If imputation is used, it is indicated which values have been imputed (e.g., interpolated; for example: followers (without missing), and followers_inputed as a TRUE/FALSE variable, indicating which ones were imputed). Finally, the data set is provided in CSV files, including column names, proper use of delimiters (e.g., a “,” may be inappropriate for textual data involving commas). No row names/index column.
 
 
-4.1   	Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remain- der of the questions in this section.
+## 4.1   	Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remain- der of the questions in this section.
  
 ...
  
-4.2   	Was the “raw” data saved in addition to the prepro- cessed/cleaned/labeled data (e.g., to support unanticipated future uses)? If so, please provide a link or other access point to the “raw” data.
+## 4.2   	Was the “raw” data saved in addition to the prepro- cessed/cleaned/labeled data (e.g., to support unanticipated future uses)? If so, please provide a link or other access point to the “raw” data.
  
 ...
  
-4.3   	Is the software used to preprocess/clean/label the instances available? If so, please provide a link or other access point.
+## 4.3   	Is the software used to preprocess/clean/label the instances available? If so, please provide a link or other access point.
  
 ...
 
 
-5.           	Uses
+## 5.           	Uses
 
 Uses (section 5 of your documentation, 5%)
 From your answers to all questions in section 5 of the documentation template, the following points need to be addressed:
@@ -218,23 +195,23 @@ From your answers to all questions in section 5 of the documentation template, t
 Users of the data learn about tasks the data set could be used for (5%)
 From the description, it is clear how the composition of the data set or the way it was preprocessed might affect future use. A clear indication is given for what the data should not be used for, e.g., relating to any of the legal or ethical concerns identified before.
 
-5.1   	Has the dataset been used for any tasks already? If so, please provide a description.
+## 5.1   	Has the dataset been used for any tasks already? If so, please provide a description.
  
 ...
  
-5.2   	Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.
+## 5.2   	Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.
  
 ...
  
-5.3   	What (other) tasks could the dataset be used for?
+## 5.3   	What (other) tasks could the dataset be used for?
  
 ...
  
-5.4   	Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
+## 5.4   	Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
  
 ...
  
-5.5   	Are there tasks for which the dataset should not be used? If so, please provide a description.
+## 5.5   	Are there tasks for which the dataset should not be used? If so, please provide a description.
  
 ...
  
