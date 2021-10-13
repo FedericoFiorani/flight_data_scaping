@@ -66,35 +66,51 @@ Each set of entities is accompanied by meaningful summary statistics (e.g., the 
 
 ## 2.1   	What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of in- stances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
 
-...
+- they represent cancelled flights
+- multiple, 2 types of instances: airline, origin airport
+- 
  
 ## 2.2   	How many instances are there in total (of each type, if appropriate)?
 
-...
+- the same number of instances for both airline and origin airport
+- the number of instances changes each day
+- depends on the number of flight cancellations
+- unknown airline: our webscraper doesnt take it into consideration
+- we only analyze the ~200 airlines listed in the code, can't include the other ones
  
 ## 2.3   	Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).
  
-...
+- the dataset contains all possible instances, because with ~1500-2000 cancelled flights each day, our scraper can run in about 30 minutes, so it doesnt overload the computer
+- we did a sampling run as well, to see if the code was running smoothly, we colected only one page per airline (the code is included for that in the script)
+- 
  
 ## 2.4   	What data does each instance consist of? “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a de- scription.
  
-...
+- it consists of text
+- the name of the airline
+- and the name of the origin airport (which enables us to analyze geographically)
 
 ## 2.5   	Is there a label or target associated with each instance? If so, please provide a description.
  
-...
+- label: 200 airlines that we analyze
+- target: origin airport specific for each airline 
  
 ## 2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
  
-...
+- there are a few unknown airlines with cancelled flights each day, but they usually ony account for 1 cancelled flight each day per airline, so overall less than ~2%
+- we are not able to categorize these airlines, so we focus only on the 200 available ones
+- also, for the unkown airlines there is no associated origin airport, so we couldnt use this data
+- 
  
 ## 2.7   	Are relationships between individual instances made explicit (e.g., users’ movie ratings, social network links)? If so, please describe how these relationships are made explicit.
  
-...
+- the relationship between the name of the airline and the origin airport is made explicit in each case
+- the origin isntances are organized into the airline instances (subcategories)
+- this is also the way the website is structured, so the extraction process makes these explicit relationships obvious
  
 ## 2.8   	Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.
  
-...
+- 
  
 ## 2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
  
