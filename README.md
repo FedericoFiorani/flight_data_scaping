@@ -236,11 +236,10 @@ From the description, it is clear how the composition of the data set or the way
 ## 5.4   	Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
  
 - There are only 100 airlines analyzed, so there is a possibility that the dataset that we created isnt 100% complete, there may be some missing airlines, but the largest ones are included
-- 
  
 ## 5.5   	Are there tasks for which the dataset should not be used? If so, please provide a description.
  
-...
+- the dataset shoudlnt be used as a sole method of choosing between potential airlines for a passenger while purchasing flight tickets. it should only be one factor, and the passenger should consider other factors as well (ticket price, services on flight, flight time etc.)
  
  
  ## Source Code for the Data Collection
