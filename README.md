@@ -110,11 +110,17 @@ Each set of entities is accompanied by meaningful summary statistics (e.g., the 
  
 ## 2.8   	Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.
  
-- 
+- No, there is not any recommended data splits, all the data collected is pulled together in a single csv file. 
  
 ## 2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
  
-...
+- The dataset relies on the number of flights cancelled all over the world and the websise collecting the info on the flights (FlightAware.com)
+a. Data on flights cancelled everyday will be available, but no guarantees that FlightsAware.com will be running 24h everyday without crashes. The code scrapes data from the previous day, so unless the website stops for more than 24h, we will be able to collect the data. The structure of the website could change and this implies an update of the code.
+b. The data of the website is available historically up to one day before in free websites, we create our historical data set base on everyday scraping to be able to make predictions. 
+c. No need to purchase licencees to scrape the website currently, it is easily accessible using the selenium package. This might change in the future. 
+- https://uk.flightaware.com/live/cancelled
+- https://uk.flightaware.com/live/cancelled/yesterday
+- https://uk.flightaware.com/live/fleet/CCA/cancelled
 
 ## 2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
  
