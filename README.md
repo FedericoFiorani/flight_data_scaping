@@ -161,28 +161,29 @@ Legal and ethical concerns (5%) For #3.6, the potential legal and/or ethical con
 
 ## 3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
  
-...
+- We collected all the instances beforehand by creating a list of all the airlines displayed on the website (100 airlines). ->We used the name of the airlines to spot thier links to all the flights cancelled for each airline, using a for loop over all the airlines. -> We accessed all the pages with flights by clicking on "Next 20" on each specific page. 
+- The airines' names are directly observable in the main page, the specific flight are srapable from different links. All the data we scraped in observable in FlightsAware.com in form of words. 
+- The calculations that we will do are based on the datasets of the scraped data, validated by the source of it (FlightAware.com)
  
 ## 3.2   	What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software pro- gram, software API)? How were these mechanisms or procedures validated?
  
-...
+- The data are collected through web scraping, so directly from the website making use of the html script and tags. The procedures has been validated by checking the corrispondnce of the data in the scraped dataset with data present in teh website in html form. 
  
 ## 3.3   	If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
  
-...
+- We initially used a deterministic sampling, collecting data only from the first page of each airline so to understand wheter the code was correctly retreiving data from the website. 
  
 ## 3.4   	Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
  
-...
+- The team working on the webscraping is composed by 5 students of the Online Data Preparation Management with the support of the professor. The work is aimed at practicing knowledge aquired, thus not compendated financially speaking. 
  
 ## 3.5   	Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the time- frame in which the data associated with the instances was created.
  
-...
+- The data has started to be collected the 13th of Ocotber and thanks to Task Scheduler use it will collect data daily for an indefinite period of time.
  
 ## 3.6   	Were any ethical review processes conducted (e.g., by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
  
-...
- 
+- No there has not been any review process by an external agent. 
 
  
 ## 4.           	Preprocessing, cleaning, labeling
