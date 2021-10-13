@@ -229,11 +229,14 @@ From the description, it is clear how the composition of the data set or the way
  
 ## 5.3   	What (other) tasks could the dataset be used for?
  
-...
+- Analyze which airlines are most likely to have their flights cancelled
+- Analyze which origin airports are most likely to cancel flights
+- Based on this data, we can make predictions for passengers about the likelihood of the cancellation of their future flight
  
 ## 5.4   	Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
  
-...
+- There are only 100 airlines analyzed, so there is a possibility that the dataset that we created isnt 100% complete, there may be some missing airlines, but the largest ones are included
+- 
  
 ## 5.5   	Are there tasks for which the dataset should not be used? If so, please provide a description.
  
