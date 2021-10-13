@@ -124,11 +124,11 @@ c. No need to purchase licencees to scrape the website currently, it is easily a
 
 ## 2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
  
-....
+- cancelled flights are public information, the data is easily available on the internet, and Flightaware.com only collects and summarizes the data
  
 ## 2.11  	Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.
  
-...
+- it might cause some anxiety for some passengers who travel a lot by air
  
 ## 2.12  	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
  
