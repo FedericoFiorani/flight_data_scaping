@@ -85,7 +85,7 @@ The label that is associate with each instance are the 200 airlines that are ana
  
 ## 2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
  
-There are a few unknown airlines with cancelled flights each day, which means this data is missing for the instances. Also, for these unknown airlines, there is no association with an origin airport, which makes it hard to use this data. They usually account for only 1 cancelled flight per airline each day, which is less than 2%. These airlines are not categorizes, so the focus is on the remaining 200 available airlines. 
+There are a few unknown airlines with cancelled flights each day, which means this data is missing for the instances. Also, for these unknown airlines, there is no association with an origin airport, which makes it hard to use this data. They usually account for only 1 cancelled flight per airline each day, which is less than 2%. These airlines are not categorized, so the focus is on the remaining 200 known airlines. 
  
 ## 2.7   	Are relationships between individual instances made explicit (e.g., users’ movie ratings, social network links)? If so, please describe how these relationships are made explicit.
  
@@ -107,15 +107,15 @@ An example of the website that shows the cancelled flights of a certain airline,
 
 ## 2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
  
-The data on cancelled flights is public information. The data is easliy available on the internet. FlightAware.com only collects and summarizes this data. 
+The data on cancelled flights is public information. The data is easily available on the internet. FlightAware.com only collects and summarizes this data. 
  
 ## 2.11  	Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.
  
-The dataset might cause anziety for passenger who travel a lot by air. The goal of the website, however, is to provide information for people who need this data. 
+The dataset might cause anxiety for passengers who travel a lot by air. The goal of the website, however, is to provide information for people who need data on cancelled flights to for example estimate the risk of cancellation for a flight they are planning.
  
 ## 2.12  	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
  
-The data contains data about flights. 
+The data contains solely about flights. 
  
  
 ## 3.           	Collection Process
@@ -130,11 +130,11 @@ Legal and ethical concerns (5%) For #3.6, the potential legal and/or ethical con
 
 ## 3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
  
-The instances were collected beforehand by creating a list of all the airlines displayed on the website. The name of the airlines was used to spot their links to all the cancelled flights for each airline. A "for loop" was used over all the airlines. all the pages with flights were accessed by clicking on "Next 20" on each specific page. The airlines' names are directly observable on the main page, whereas specific flight data is scrapable from different links. All the data is scraped in textual form from FlightAware.com. The calculations that can be done are based on the datasets of the scraped data, validated by the source FlightAware.com 
+The instances were collected beforehand by creating a list of all the airlines displayed on the website. The name of the airlines was used to spot their links to all the cancelled flights for each airline. A "for loop" was used over all the airlines. All the pages with flights were accessed by clicking on "Next 20" on each specific page. The airlines' names are directly observable on the main page, whereas specific flight data is scrapable from specific links for each airline. All the data is scraped in textual form from FlightAware.com. The calculations that can be done are based on the datasets of the scraped data, validated by the source FlightAware.com.
  
 ## 3.2   	What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software pro- gram, software API)? How were these mechanisms or procedures validated?
  
-The data is collected with webscraping, which means that the data is directly scraped from the website, making use of html scripts and tags. The procedures have been validated by checking the correspondence of the data in the scraped dataset with the data present on the website in html form. 
+The data is collected with webscraping via python, which means that the data is directly scraped from the website, making use of html scripts and tags. The procedures have been validated by checking the correspondence of the data in the scraped dataset with the data present on the website in html form. 
  
 ## 3.3   	If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
  
@@ -142,7 +142,7 @@ Initially, a deterministic sampling was used. This means data was collected only
  
 ## 3.4   	Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
  
-The team working on the webscraping is composed by 5 students of the Online Data Collection Management, with the support of the professor of this course. The work is aimed at practicing aqcuired knowledge, thus no financial compensation was used. 
+The team working on the webscraping project is composed by five students following the Online Data Collection and Management (oDCM) course at Tilburg University, with the support of the professor of this course. The work is aimed at practicing aqcuired knowledge, thus no financial compensation was used. 
  
 ## 3.5   	Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the time- frame in which the data associated with the instances was created.
  
