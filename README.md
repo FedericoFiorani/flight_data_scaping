@@ -4,9 +4,9 @@ _Based on worldwide flight cancellation statistics, which airlines and flight ro
 [Flight_data](https://uk.flightaware.com/live/cancelled/)
 
 ## Running instructions
--credentials required
--packages required
--tools required
+- Credentials
+- Instructions
+- Tools
 
 ## Grading
 Documentation (60% of the final grade)
@@ -81,7 +81,7 @@ Each instance consists of text. The text provides the name of the airline and th
 
 ## 2.5   	Is there a label or target associated with each instance? If so, please provide a description.
  
- The label that is associate with each instance are the 200 airlines that are analyzed. The target is the origin airport that is specific for each flight. 
+The label that is associate with each instance are the 200 airlines that are analyzed. The target is the origin airport that is specific for each flight. 
  
 ## 2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
  
@@ -97,39 +97,25 @@ No, there are not any recommended data splits. All the collected data is pulled 
  
 ## 2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
  
-- The dataset relies on the number of flights cancelled all over the world and the websise collecting the info on the flights (FlightAware.com)
-a. Data on flights cancelled everyday will be available, but no guarantees that FlightsAware.com will be running 24h everyday without crashes. The code scrapes data from the previous day, so unless the website stops for more than 24h, we will be able to collect the data. The structure of the website could change and this implies an update of the code.
-b. The data of the website is available historically up to one day before in free websites, we create our historical data set base on everyday scraping to be able to make predictions. 
-c. No need to purchase licencees to scrape the website currently, it is easily accessible using the selenium package. This might change in the future. 
-- https://uk.flightaware.com/live/cancelled
-- https://uk.flightaware.com/live/cancelled/yesterday
-- https://uk.flightaware.com/live/fleet/CCA/cancelled
+The dataset relies on the number of flights cancelled all over the world and the website FlightAware.com collects the information on these flights. 
+Data on flights cancelled everyday will be available, but there are no guarantees that FlightAware.com runs 24 hours a day without crashing. The code scrapes data from the previous day, so unless the website stops working for more than 24 hours, the data can be collected. The structure of the website could change and this requires an update of the code. The data of the website is historically available up to one day before. In this way, a historical data set is created based on everyday scraping, so predictions can be made. There are no restrictions to get access to the data, such as purchase licencees to scrape the website. The data is easily accessible using the "selenium" package. There is no guarantee this will not change in the future. 
+
+The link to the website of cancelled flights: https://uk.flightaware.com/live/cancelled
+The link to the website of cancelled flights, one day before: https://uk.flightaware.com/live/cancelled/yesterday
+An example of the website that shows the cancelled flights of a certain airline, in this case China Airlines: https://uk.flightaware.com/live/fleet/CCA/cancelled
+
 
 ## 2.10  	Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by doctorpatient confidentiality, data that includes the content of individuals non-public communications)? If so, please provide a description.
  
-- cancelled flights are public information, the data is easily available on the internet, and Flightaware.com only collects and summarizes the data
+The data on cancelled flights is public information. The data is easliy available on the internet. FlightAware.com only collects and summarizes this data. 
  
 ## 2.11  	Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? If so, please describe why.
  
-- it might cause some anxiety for some passengers who travel a lot by air
-- but the goal of the website is to provide information for people who need it
+The dataset might cause anziety for passenger who travel a lot by air. The goal of the website, however, is to provide information for people who need this data. 
  
 ## 2.12  	Does the dataset relate to people? If not, you may skip the remaining questions in this section.
  
-- no, it relates to flights
- 
-## 2.13 Does the dataset identify any subpopulations (e.g., by age, gender)? If so, please describe how these subpopulations are identified and provide a description of their respective distributions within the dataset.
- 
-...
- 
-## 2.14 Is it possible to identify individuals (i.e., one or more natural persons), either directly or indirectly (i.e., in combination with other data) from the dataset? If so, please describe how.
- 
-...
- 
- 
-## 2.15  	Does the dataset contain data that might be considered sensitive in any way (e.g., data that reveals racial or ethnic origins, sexual orientations, religious beliefs, political opinions or union memberships, or locations; financial or health data; biometric or genetic data; forms of government identification, such as social security numbers; criminal history)? If so, please provide a description.
- 
-...
+The data contains data about flights. 
  
  
 ## 3.           	Collection Process
@@ -144,29 +130,27 @@ Legal and ethical concerns (5%) For #3.6, the potential legal and/or ethical con
 
 ## 3.1   	How was the data associated with each instance acquired? Was the data directly observable (e.g., raw text, movie ratings), reported by sub- jects (e.g., survey responses), or indirectly inferred/derived from other data (e.g., part-of-speech tags, model-based guesses for age or language)? If data was reported by subjects or indirectly inferred/derived from other data, was the data validated/verified? If so, please describe how.
  
-- We collected all the instances beforehand by creating a list of all the airlines displayed on the website (100 airlines). ->We used the name of the airlines to spot thier links to all the flights cancelled for each airline, using a for loop over all the airlines. -> We accessed all the pages with flights by clicking on "Next 20" on each specific page. 
-- The airines' names are directly observable in the main page, the specific flight are srapable from different links. All the data we scraped in observable in FlightsAware.com in form of words. 
-- The calculations that we will do are based on the datasets of the scraped data, validated by the source of it (FlightAware.com)
+The instances were collected beforehand by creating a list of all the airlines displayed on the website. The name of the airlines was used to spot their links to all the cancelled flights for each airline. A "for loop" was used over all the airlines. all the pages with flights were accessed by clicking on "Next 20" on each specific page. The airlines' names are directly observable on the main page, whereas specific flight data is scrapable from different links. All the data is scraped in textual form from FlightAware.com. The calculations that can be done are based on the datasets of the scraped data, validated by the source FlightAware.com 
  
 ## 3.2   	What mechanisms or procedures were used to collect the data (e.g., hardware apparatus or sensor, manual human curation, software pro- gram, software API)? How were these mechanisms or procedures validated?
  
-- The data are collected through web scraping, so directly from the website making use of the html script and tags. The procedures has been validated by checking the corrispondnce of the data in the scraped dataset with data present in teh website in html form. 
+The data is collected with webscraping, which means that the data is directly scraped from the website, making use of html scripts and tags. The procedures have been validated by checking the correspondence of the data in the scraped dataset with the data present on the website in html form. 
  
 ## 3.3   	If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
  
-- We initially used a deterministic sampling, collecting data only from the first page of each airline so to understand wheter the code was correctly retreiving data from the website. 
+Initially, a deterministic sampling was used. This means data was collected only from the first page of each airline to understand whether the code was correctly retreiving data from the website. 
  
 ## 3.4   	Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
  
-- The team working on the webscraping is composed by 5 students of the Online Data Preparation Management with the support of the professor. The work is aimed at practicing knowledge aquired, thus not compendated financially speaking. 
+The team working on the webscraping is composed by 5 students of the Online Data Collection Management, with the support of the professor of this course. The work is aimed at practicing aqcuired knowledge, thus no financial compensation was used. 
  
 ## 3.5   	Over what timeframe was the data collected? Does this timeframe match the creation timeframe of the data associated with the instances (e.g., recent crawl of old news articles)? If not, please describe the time- frame in which the data associated with the instances was created.
  
-- The data has started to be collected the 13th of Ocotber and thanks to Task Scheduler use it will collect data daily for an indefinite period of time.
+The data has been collected since the 13th of October. With the use of Task Scheduler, the data will be collected daily for an indefinite period of time. 
  
 ## 3.6   	Were any ethical review processes conducted (e.g., by an institutional review board)? If so, please provide a description of these review processes, including the outcomes, as well as a link or other access point to any supporting documentation.
  
-- No there has not been any review process by an external agent. 
+No review processes were done by external agents. 
 
  
 ## 4.           	Preprocessing, cleaning, labeling
