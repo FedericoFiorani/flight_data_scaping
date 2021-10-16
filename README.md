@@ -167,15 +167,15 @@ The files have a correct data structure, and variables are of the correct type (
 
 ## 4.1   	Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remain- der of the questions in this section.
  
-...
- 
+-
+
 ## 4.2   	Was the “raw” data saved in addition to the prepro- cessed/cleaned/labeled data (e.g., to support unanticipated future uses)? If so, please provide a link or other access point to the “raw” data.
  
-...
+-
  
 ## 4.3   	Is the software used to preprocess/clean/label the instances available? If so, please provide a link or other access point.
  
-...
+-
 
 
 ## 5.           	Uses
@@ -188,26 +188,28 @@ From the description, it is clear how the composition of the data set or the way
 
 ## 5.1   	Has the dataset been used for any tasks already? If so, please provide a description.
  
-...
+The dataset has not been used for any tasks yet. 
  
 ## 5.2   	Is there a repository that links to any or all papers or systems that use the dataset? If so, please provide a link or other access point.
- 
-...
+
+- 
  
 ## 5.3   	What (other) tasks could the dataset be used for?
- 
+
+Some examples of tasks that can be done with the dataset are: 
 - Analyze which airlines are most likely to have their flights cancelled
 - Analyze which origin airports are most likely to cancel flights
-- Based on this data, we can make predictions for passengers about the likelihood of the cancellation of their future flight
+- Predictions for passengers about the likelihood of the cancellation of their future flight
  
 ## 5.4   	Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a future user might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other undesirable harms (e.g., financial harms, legal risks) If so, please provide a description. Is there anything a future user could do to mitigate these undesirable harms?
  
-- There are only 100 airlines analyzed, so there is a possibility that the dataset that we created isnt 100% complete, there may be some missing airlines, but the largest ones are included
+There are approximately 100 airlines analyzed, which creates a possibility that the dataset that was created is not 100% complete. There may be some missing airlines, however, the largest ones of the world are all included. 
  
 ## 5.5   	Are there tasks for which the dataset should not be used? If so, please provide a description.
  
-- the dataset shoudlnt be used as a sole method of choosing between potential airlines for a passenger while purchasing flight tickets. it should only be one factor, and the passenger should consider other factors as well (ticket price, services on flight, flight time etc.)
- 
+The dataset should not be used as a sole method of choosing between potential airlines for a passenger while purchasing flight tickets. It should only be one factor, and the passenger should consider other factors as well, like ticket prices, service on the flight, flight time, etc. 
+
+
  
  ## Source Code for the Data Collection
  
