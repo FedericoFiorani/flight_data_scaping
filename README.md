@@ -45,8 +45,7 @@ FlightAware is a digital aviation company and operates the world's largest fligh
  
 ## 1.3   	Who funded the creation of the dataset? If there is an associated grant, please provide the name of the grantor and the grant name and number.
  
-Not sure this is the correct answer:
-FlightAware receives data from air traffic control systems in over 45 countries, FlightAware's network of ADS-B ground stations in 195 countries, Aireon global space-based ADS-B, and datalink (satellite/VHF) via every major provider, including ARINC, SITA, Satcom Direct, Garmin, and Honeywell GoDirect.
+FlightAware receives data from air traffic control systems in over 45 countries, FlightAware's network of ADS-B ground stations in 195 countries, Aireon global space-based ADS-B, and datalink (satellite/VHF) via every major provider, including ARINC, SITA, Satcom Direct, Garmin, and Honeywell GoDirect. There is no extra funding. 
 
 
 ## 2.           	Composition
@@ -66,51 +65,35 @@ Each set of entities is accompanied by meaningful summary statistics (e.g., the 
 
 ## 2.1   	What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? Are there multiple types of in- stances (e.g., movies, users, and ratings; people and interactions between them; nodes and edges)? Please provide a description.
 
-- they represent cancelled flights
-- multiple, 2 types of instances: airline, origin airport
-- 
+The instances that comprise the dataset represent cancelled flights. There are multiple types, namely the airline in charge of the cancelled flight and the origin airport of the cancelled flight.  
  
 ## 2.2   	How many instances are there in total (of each type, if appropriate)?
 
-- the same number of instances for both airline and origin airport
-- the number of instances changes each day
-- depends on the number of flight cancellations
-- unknown airline: our webscraper doesnt take it into consideration
-- we only analyze the ~200 airlines listed in the code, can't include the other ones
+The number of instances are the same for both the airline and the origin airport. The number of instances changes each day and it depends on the number of flight cancellations. There are also unknown airlines in the data, but the scraper does not take them into consideration. The approximately 200 airlines that are listed in the code are analyzed. 
  
 ## 2.3   	Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? If the dataset is a sample, then what is the larger set? Is the sample representative of the larger set (e.g., geographic coverage)? If so, please describe how this representativeness was validated/verified. If it is not representative of the larger set, please describe why not (e.g., to cover a more diverse range of instances, because instances were withheld or unavailable).
  
-- the dataset contains all possible instances, because with ~1500-2000 cancelled flights each day, our scraper can run in about 30 minutes, so it doesnt overload the computer
-- we did a sampling run as well, to see if the code was running smoothly, we colected only one page per airline (the code is included for that in the script)
-- 
+The dataset contains all possible instances. With between 1500 and 2000 cancelled flights each day, the scraper can run them in about 30 minutes. This means the scraper does not overload the computer. A sampling run has also been done, to see if the code was running smoothly, where only one page per airline was collected. The code for this can be found in the script. 
  
 ## 2.4   	What data does each instance consist of? “Raw” data (e.g., unprocessed text or images) or features? In either case, please provide a de- scription.
  
-- it consists of text
-- the name of the airline
-- and the name of the origin airport (which enables us to analyze geographically)
+Each instance consists of text. The text provides the name of the airline and the name of the origin airport, which makes it possible to analyze also geographically. 
 
 ## 2.5   	Is there a label or target associated with each instance? If so, please provide a description.
  
-- label: 200 airlines that we analyze
-- target: origin airport specific for each airline 
+ The label that is associate with each instance are the 200 airlines that are analyzed. The target is the origin airport that is specific for each flight. 
  
 ## 2.6   	Is any information missing from individual instances? If so, please provide a description, explaining why this information is missing (e.g., because it was unavailable). This does not include intentionally removed information, but might include, e.g., redacted text.
  
-- there are a few unknown airlines with cancelled flights each day, but they usually ony account for 1 cancelled flight each day per airline, so overall less than ~2%
-- we are not able to categorize these airlines, so we focus only on the 200 available ones
-- also, for the unkown airlines there is no associated origin airport, so we couldnt use this data
-- 
+There are a few unknown airlines with cancelled flights each day, which means this data is missing for the instances. Also, for these unknown airlines, there is no association with an origin airport, which makes it hard to use this data. They usually account for only 1 cancelled flight per airline each day, which is less than 2%. These airlines are not categorizes, so the focus is on the remaining 200 available airlines. 
  
 ## 2.7   	Are relationships between individual instances made explicit (e.g., users’ movie ratings, social network links)? If so, please describe how these relationships are made explicit.
  
-- the relationship between the name of the airline and the origin airport is made explicit in each case
-- the origin isntances are organized into the airline instances (subcategories)
-- this is also the way the website is structured, so the extraction process makes these explicit relationships obvious
+The relationship between the name of the airline and the origin airport is made explicit in each case. The origin instances are organizes into the airline instances, like a subcategory. This is also the way the website is structured, so the extraction process makes these explicit relationships easy to maintain. 
  
 ## 2.8   	Are there recommended data splits (e.g., training, development/validation, testing)? If so, please provide a description of these splits, explaining the rationale behind them.
- 
-- No, there is not any recommended data splits, all the data collected is pulled together in a single csv file. 
+
+No, there are not any recommended data splits. All the collected data is pulled together in a single csv-file. 
  
 ## 2.9   	Is the dataset self-contained, or does it link to or otherwise rely on external resources (e.g., websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (i.e., including the external resources as they ex- isted at the time the dataset was created); c) are there any restrictions (e.g., licenses, fees) associated with any of the external resources that might apply to a future user? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.
  
