@@ -167,15 +167,16 @@ The files have a correct data structure, and variables are of the correct type (
 
 ## 4.1   	Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remain- der of the questions in this section.
  
--
+The program R was used to clean the dataset, where missing values were deleted. 
 
 ## 4.2   	Was the “raw” data saved in addition to the prepro- cessed/cleaned/labeled data (e.g., to support unanticipated future uses)? If so, please provide a link or other access point to the “raw” data.
  
--
+Link to raw data: ... 
  
 ## 4.3   	Is the software used to preprocess/clean/label the instances available? If so, please provide a link or other access point.
  
--
+The software that was used to clean the data is R, which is publicly available. 
+- [R](https://cran.r-project.org/) 
 
 
 ## 5.           	Uses
